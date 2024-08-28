@@ -1,0 +1,41 @@
+@use "../variables" as v;
+
+.tag-item
+{
+	& > div div
+	{
+		background-color: color-mix(in srgb, var(--custom-color) 20%, white);
+	}
+
+	background-color: color-mix(in srgb, var(--custom-color) 10%, white);
+
+	@media screen and (min-width: v.$break-point-big)
+	{
+		&:not(&:last-child):after
+		{
+			content: "";
+			width: 1px;
+			height: 100%;
+			background-color: #E7E8EA;
+			margin-left: 20px;
+			position: absolute;
+			right: -8px;
+			top: 0px;
+		}
+	}
+
+	&:hover
+	{
+		background-color: color-mix(in srgb, var(--custom-color) 25%, white);
+
+		div > div
+		{
+			background-color: color-mix(in srgb, var(--custom-color) 100%, white);
+
+			path, rect
+			{
+				stroke: v.$color-neutraul-0;
+			}
+		}
+	}
+}

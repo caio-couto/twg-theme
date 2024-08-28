@@ -1,0 +1,8 @@
+# Directories
+/build
+/node_modules
+
+# Files
+*.log
+*.lock
+.DS_Store

@@ -1,0 +1,84 @@
+@use "../variables" as v;
+
+.post
+{
+	.post-wrapper
+	{
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(auto, 383px));
+		row-gap: 40px;
+		column-gap: 32px;
+		justify-content: space-evenly;
+		padding-bottom: 80px;
+		border-bottom: 1px solid rgba(26, 26, 26, 0.15);
+	}
+}
+
+.post-prev, .post-next
+{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	padding: 12px 8px;
+	user-select: none;
+	color: #1F1F1F;
+
+	/* P/16/Medium */
+	font-family: v.$font-poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%; /* 24px */
+	letter-spacing: -0.32px;
+
+	svg
+	{
+		display: inline;
+	}
+}
+
+.post-pagination
+{
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.post-counter
+{
+	ul
+	{
+		list-style: none;
+		display: flex;
+		gap: 4px;
+
+		li
+		{
+			user-select: none;
+			width: 40px;
+			height: 40px;
+			color: #23272F;
+			background-color: #FFF;
+			text-align: center;
+			border-radius: 8px;
+			cursor: pointer;
+
+			/* P/14/Medium */
+			font-family: v.$font-poppins;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 40px; /* 21px */
+			letter-spacing: -0.28px;
+
+			&.selected
+			{
+				background-color: #1D89F3;
+				color: #FFF;
+			}
+		}
+	}
+}

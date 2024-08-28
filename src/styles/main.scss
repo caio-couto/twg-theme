@@ -1,0 +1,155 @@
+@use "variables" as v;
+@import "./modules/header";
+@import "./modules/tags";
+@import "./modules/post";
+@import "./modules/footer";
+@import "./modules/faq";
+@import "./components/titles";
+@import "./components/badge";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "single";
+
+*
+{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+/*
+** Contact Form 7 Styles
+*/
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="url"],
+.wpcf7-form input[type="password"],
+.wpcf7-form input[type="search"],
+.wpcf7-form input[type="number"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form textarea {
+    color: #1f252b;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 0;
+    border: 0;
+    border-radius: 4px;
+		outline: 1px solid #DEDFE1;
+		background: var(--Branco, #FFF);
+}
+
+.wpcf7-form p {
+    margin: 0 0 28px;
+}
+
+.wpcf7-text:focus,
+.wpcf7-textarea:focus {
+    outline: 1px solid rgba(84, 222, 197, 0.9);
+    outline-offset: 0;
+}
+
+div.wpcf7-mail-sent-ok {
+    border: 0;
+    background: #5471de;
+    color: #fff;
+    padding: 18px;
+}
+
+div.wpcf7-acceptance-missing,
+div.wpcf7-validation-errors {
+    border: 0;
+    background: #f9443b;
+    color: #fff;
+    padding: 18px;
+}
+
+span.wpcf7-not-valid-tip {
+    color: #f9443b;
+}
+
+/*
+** Button Styles
+*/
+
+.wpcf7-form input[type="submit"] {
+    background-color: var(--primary-color);
+    border: 0;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px 16px;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.wpcf7-form input[type="submit"]:hover {
+		background-color: var(--secondary-color);
+    cursor: pointer;
+    box-shadow: 0px 7px 16px -7px rgba(0, 0, 0, 0.4);
+    border: 0;
+}
+
+.relative-color
+{
+	background-color: color-mix(in srgb, var(--custom-color) 10%, white);
+
+	color: #222;
+
+	/* H3/16/Regular */
+	font-family: v.$font-poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 24px */
+	letter-spacing: -0.32px;
+}
+
+picture
+{
+	display: inline-block;
+}
+
+body
+{
+	width: 100%;
+	height: 100%;
+	font-family: v.$font-poppins;
+	overflow-x: hidden;
+}
+
+.main
+{
+	width: 100%;
+	height: 100%;
+}
+
+.custom-color-blue
+{
+	color: v.$color-primary-700;
+}
+
+.bg-even
+{
+	background-color: #F8F9FC;
+}
+.box
+{
+	width: 100%;
+	// 693px
+
+	&.box--odd
+	{
+		background-color: #FFFF;
+	}
+
+	&.box--even
+	{
+		background-color: #F8F9FC;
+	}
+}
